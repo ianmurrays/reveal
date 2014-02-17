@@ -8,7 +8,7 @@
 
 
 (function ($) {
-  $('a[data-reveal-id]').live('click', function (event) {
+  $('body').delegate('a[data-reveal-id]', 'click', function (event) {
     event.preventDefault();
     var modalLocation = $(this).attr('data-reveal-id');
     $('#' + modalLocation).reveal($(this).data());
